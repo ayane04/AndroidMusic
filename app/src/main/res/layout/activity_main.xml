@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:paddingTop="0dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginVertical="12dp"
+        android:src="@drawable/cover" />
+
+<!--    <SeekBar-->
+<!--        android:id="@+id/seekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:layout_marginVertical="12dp"-->
+<!--        android:progress="50"-->
+<!--        android:progressBackgroundTint="#B3B3B3"-->
+<!--        android:progressTint="#FFFFFF"-->
+<!--        android:secondaryProgressTint="#FFFFFF"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:thumbTint="#FFFFFF" />-->
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:progress="50"
+        android:progressBackgroundTint="#B3B3B3"
+        android:progressTint="#FFFFFF"
+        android:secondaryProgressTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:thumbTint="#FFFFFF" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:paddingLeft="40dp"
+        android:text="群青日和"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:text="椎名林檎"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_bg"
+            android:onClick="onBackButtonClick"
+            android:src="@drawable/ic_baseline_skip_previous_24" />
+
+        <ImageButton
+            android:id="@+id/play_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/btn_bg"
+            android:onClick="onPlayButtonClick"
+            android:src="@drawable/ic_baseline_play_arrow_24" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/back_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onBackButtonClick"-->
+<!--            android:text="@string/bt_back"-->
+<!--            android:src="@drawable/ic_baseline_skip_previous_24"/>-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/next_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onBackButtonClick"-->
+<!--            android:text="@string/bt_back"-->
+<!--            android:src="@drawable/ic_baseline_skip_next_24"/>-->
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_bg"
+            android:onClick="onForwardButtonClick"
+            android:src="@drawable/ic_baseline_skip_next_24" />
+
+    </LinearLayout>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swLoop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sw_loop" />
+
+</LinearLayout>
+
