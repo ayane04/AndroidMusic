@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         _player = MediaPlayer()
+        val seekbar= findViewById<SeekBar>(R.id.seekbar)
+        seekbar.progress=0
+        seekbar.max= _player!!.duration
 
         val mediaFileUriStr = "android.resource://${packageName}/${R.raw.around_shinjuku}"
         val mediaFileUri = Uri.parse(mediaFileUriStr)
@@ -39,7 +42,21 @@ class MainActivity : AppCompatActivity() {
 
         val loopSwitch = findViewById<SwitchMaterial>(R.id.swLoop)
         loopSwitch.setOnCheckedChangeListener(LoopSwitchChangedListener())
+
+        seekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, pos: Int, changed: Boolean) {
+                if(changed){
+                    _player!!.seekTo(pos)
+                }
+            }
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+            }
+        })
     }
+
 
     override fun onDestroy() {
         _player?.let {
@@ -111,6 +128,7 @@ class MainActivity : AppCompatActivity() {
             _player?.isLooping = isChecked
         }
     }
+
 }
 
 
