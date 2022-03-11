@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Android music</string>
-    <string name="sw_loop" />
+    <string name="sw_loop">Loop</string>
     <string name="bt_back" />
 </resources>
