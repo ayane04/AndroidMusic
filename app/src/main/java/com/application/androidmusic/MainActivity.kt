@@ -75,11 +75,13 @@ class MainActivity : AppCompatActivity() {
 
             if(it.isPlaying) {
                 it.pause()
-                play_btn.setBackgroundResource(R.drawable.ic_baseline_pause_24)
+                play_btn.setBackgroundResource(R.drawable.ic_baseline_play_arrow_24)
+                play_btn.setImageResource(R.drawable.btn_bg)
             }
             else {
                 it.start()
-                play_btn.setBackgroundResource(R.drawable.ic_baseline_play_arrow_24)
+                play_btn.setBackgroundResource(R.drawable.ic_baseline_pause_24)
+                play_btn.setImageResource(R.drawable.btn_bg)
             }
         }
     }
@@ -103,6 +105,7 @@ class MainActivity : AppCompatActivity() {
     private inner class PlayerPreparedListener : MediaPlayer.OnPreparedListener {
         override fun onPrepared(mp: MediaPlayer) {
             val play_btn = findViewById<ImageButton>(R.id.play_btn)
+            play_btn.setImageResource(R.drawable.btn_bg)
             play_btn.isEnabled = true
             val next_btn = findViewById<ImageButton>(R.id.next_btn)
             next_btn.isEnabled = true

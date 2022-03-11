@@ -77,8 +77,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="12dp"
             android:background="@drawable/btn_bg"
-            android:onClick="onPlayButtonClick"
-            android:src="@drawable/ic_baseline_play_arrow_24" />
+            android:onClick="onPlayButtonClick" />
+<!--            android:src="@drawable/ic_baseline_play_arrow_24" -->
+
+
 
 <!--        <ImageButton-->
 <!--            android:id="@+id/back_btn"-->
